@@ -1,0 +1,76 @@
+<h1>
+    <?php  echo 'Los parametros son' .'  '.$p1 . ' ' . $p2 . ' ' . $p3 ?>
+</h1>
+
+<div class="row">
+<?php foreach( [1,1,1,1,1,1] as $i) : ?>
+
+
+    <div class="col m-1">
+        <div class="card">
+            <?php echo Html::img('logo.png', 'texto alterno', '' ); ?>
+            <div class="card-body">
+                <h4 class="card-title">Kumbia</h4>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Numquam quidem veritatis saepe fugiat corporis ducimus quasi
+                    natus tempore ut id suscipit harum distinctio, impedit quibusdam
+                    consectetur eveniet quaerat quisquam aliquid.
+                </p>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+</div>
+
+<div class="row">
+    <div class="col">
+        <?php echo Html::link('prueba/', 'Ir al indice') ?>
+    </div>
+</div>
+
+<?php echo Form::open() ?>
+
+    <?php echo Form::label('Usuario', 'input') ?>
+    <?php echo Form::input('password', 'input');  ?>
+
+    <?php echo Form::label('Contraseña', 'pass') ?>
+    <?php echo Form::text('pass');  ?>
+    <?php echo Form::select('selccion', $elementosMenu, null, 'Selecciona opcion');  ?>
+    <?php echo Form::button('Boton');  ?>
+    <?php echo Form::submit('Enviar');  ?>
+    <?php echo Form::reset('Reiniciar');  ?>
+
+    <?php echo Form::check('Checar', 'c');  ?>
+    <?php echo Form::check('Revizar', 'r');  ?>
+    <?php echo Form::check('Monitorear', 'm');  ?>
+
+    <?php echo Form::radio('si', 'yes');  ?>
+    <?php echo Form::radio('no', 'not');  ?>
+    <?php echo Form::radio('talvez', 'maybe');  ?>
+    
+    <?= Js::link('usuario/eliminar/5', 'Eliminar', '¿Está seguro de esta
+operación?') ?> 
+
+
+
+
+
+
+
+
+
+
+
+<?php echo Form::close() ?>
+
+
+
+
+</div>
+
+
+
+
+    
+</div>
